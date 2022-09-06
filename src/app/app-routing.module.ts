@@ -1,4 +1,4 @@
-import { BeanListComponent } from './bean/bean-list/bean-list.component';
+import { BeanListComponent } from './beans/beans-list/bean-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 

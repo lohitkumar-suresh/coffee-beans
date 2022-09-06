@@ -5,7 +5,7 @@ import { CoffeeBean } from '../model/bean';
 @Injectable({
   providedIn: 'root'
 })
-export class BeanService {
+export class BeansService {
 
   ENDPOINT_URL = 'https://random-data-api.com';
   TOTAL = 50;

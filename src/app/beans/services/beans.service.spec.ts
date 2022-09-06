@@ -1,14 +1,15 @@
 import { of } from 'rxjs';
-import { BeanService } from './bean.service';
+import { BeansService } from './beans.service';
 
 describe('BeanService', () => {
-  let service: BeanService;
+  let service: BeansService;
   let httpClientSpy: any;
+  const ENDPOINT_URL = 'https://random-data-api.com/api/coffee/random_coffee?size=50&response_type=JSON';
   beforeEach(() => {
     httpClientSpy = {
       get: jest.fn()
     }
-    service = new BeanService(httpClientSpy)
+    service = new BeansService(httpClientSpy)
   });
 
   it('should be created', () => {
@@ -25,11 +26,10 @@ describe('BeanService', () => {
       "notes": "vibrant, tea-like, red apple, smokey, kiwi",
       "intensifier": "dense"
     };
-    const url = 'https://random-data-api.com/api/coffee/random_coffee?size=50&response_type=JSON';
     jest.spyOn(httpClientSpy, 'get').mockReturnValue(of(res));
     service.getBeans();
 
     expect(httpClientSpy.get).toBeCalledTimes(1);
-    expect(httpClientSpy.get).toHaveBeenCalledWith(url);
+    expect(httpClientSpy.get).toHaveBeenCalledWith(ENDPOINT_URL);
   });
 });

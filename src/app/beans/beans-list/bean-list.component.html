@@ -1,18 +1,11 @@
 <div class="example-container mat-elevation-z8">
-  <div class="example-loading-shade"
-       *ngIf="isLoadingResults">
-    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  <div class="example-loading-shade" *ngIf="isLoadingResults | async">
+    <mat-spinner></mat-spinner>
   </div>
 
   <div class="example-table-container">
 
-    <table mat-table [dataSource]="dataSource" class="example-table">
-      <!-- No Column -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> ID </th>
-        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
-      </ng-container>
-
+    <table mat-table [dataSource]="beans" class="example-table">
       <!-- Blend Name Column -->
       <ng-container matColumnDef="blend_name">
         <th mat-header-cell *matHeaderCellDef>Blend Name</th>
@@ -24,10 +17,13 @@
         <th mat-header-cell *matHeaderCellDef>Intensifier</th>
         <td mat-cell *matCellDef="let row">{{row.intensifier}}</td>
       </ng-container>
+
+      <!-- Variety Column -->
       <ng-container matColumnDef="variety">
         <th mat-header-cell *matHeaderCellDef>Variety</th>
         <td mat-cell *matCellDef="let row">{{row.variety}}</td>
       </ng-container>
+
       <!-- View Details Button Column-->
       <ng-container matColumnDef="customColumn1">
         <th mat-header-cell *matHeaderCellDef></th>
