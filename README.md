@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
-This application uses Angular Version: 14 with NGRX state managementto show the list of coffee beans in a tabular format.
+This application uses Angular Version: 14 with NGRX state management to show the list of coffee beans in a tabular format.
 
 Steps: 
 
