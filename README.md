@@ -9,7 +9,7 @@ Steps:
 1. Git Clone the repository.
 2. cd to the cloned repo.
 3. Run "npm install"
-4. RUn "ng server" 
+4. Run "ng server" 
 5. Load the application using `http://localhost:4200/`
 
 ## Development server

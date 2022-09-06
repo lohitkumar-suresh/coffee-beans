@@ -1,5 +1,5 @@
-import { beansReducer } from "../state/beans.reducer"
-import { BeansState } from "../state/beans.state"
+import { beansReducer } from "../beans/state/beans.reducer"
+import { BeansState } from "../beans/state/beans.state"
 
 
 
