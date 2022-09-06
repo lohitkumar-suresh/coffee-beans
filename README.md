@@ -12,6 +12,13 @@ Steps:
 4. Run "ng server" 
 5. Load the application using `http://localhost:4200/`
 
+This project uses ##Jest for running unit test case.
+
+## Running unit tests using JEST
+
+Run `npm run test` to execute the unit tests via [Jest].
+Run `npm run test:coverage` to check unit test code coverage.
+
 ## Development server
 
 The application will automatically reload if you change any of the source files.
@@ -23,11 +30,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests using JEST
-
-Run `npm run test` to execute the unit tests via [Jest].
-Run `npm run test:coverage` to check unit test code coverage.
 
 ## Running end-to-end tests
 
