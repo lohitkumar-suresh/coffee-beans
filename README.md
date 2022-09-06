@@ -2,9 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
+This application uses Angular Version: 14 with NGRX state management to show the list of coffee beans in a tabular format.
+
+Steps: 
+
+1. Git Clone the repository.
+2. cd to the cloned repo.
+3. Run "npm install"
+4. RUn "ng server" 
+5. Load the application using `http://localhost:4200/`
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -14,9 +24,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Running unit tests using JEST
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm run test` to execute the unit tests via [Jest].
+Run `npm run test:coverage` to check unit test code coverage.
 
 ## Running end-to-end tests
 
