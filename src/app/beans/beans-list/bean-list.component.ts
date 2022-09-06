@@ -7,6 +7,7 @@ import { select, Store } from '@ngrx/store';
 import { getBeans, getLoadingStatus } from '../state/beans.selectors';
 import { loadBeans } from '../state/beans.actions';
 import { AppState } from 'src/app/store/app.state';
+import { MatTableDataSource } from '@angular/material/table';
 @Component({
   selector: 'app-bean-list',
   templateUrl: './bean-list.component.html',
@@ -14,7 +15,7 @@ import { AppState } from 'src/app/store/app.state';
 })
 export class BeanListComponent implements OnInit {
 
-  beans!: Observable<CoffeeBean[]>;
+  beans!: MatTableDataSource<CoffeeBean>;
   isLoadingResults!: Observable<boolean>;
   displayedColumns: string[] = ['intensifier', 'blend_name', 'variety', 'customColumn1'];
 
@@ -29,8 +30,11 @@ export class BeanListComponent implements OnInit {
 
   loadBeans() {
     this.store.dispatch(loadBeans());
-    this.beans = this.store.pipe(select(getBeans));
-    this.isLoadingResults = this.store.select(getLoadingStatus);
+    this.store.pipe(select(getBeans)).subscribe(beansArr => {
+      this.beans = new MatTableDataSource(beansArr);
+      this.beans.paginator = this.paginator;
+    });
+    this.isLoadingResults = this.store.pipe(select(getLoadingStatus));
   }
 
   viewDetails(id? :any) {
