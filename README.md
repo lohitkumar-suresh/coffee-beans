@@ -2,9 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
+This application uses Angular Version: 14 with NGRX state managementto show the list of coffee beans in a tabular format.
+
+Steps: 
+
+1. Git Clone the repository.
+2. cd to the cloned repo.
+3. Run "npm install"
+4. RUn "ng server" 
+5. Load the application using `http://localhost:4200/`
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
