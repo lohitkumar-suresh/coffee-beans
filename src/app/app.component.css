@@ -1,3 +1,10 @@
 main {
   padding: 2rem;
+  height: calc(100% - 128px);
+  overflow: auto;
+}
+@media screen and (max-width: 960px) {
+  main {
+    padding: 0;
+  }
 }

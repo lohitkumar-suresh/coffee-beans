@@ -1,8 +1,13 @@
-<h1>Coffee Details</h1>
+<div class="bean-detail">
 
-<div class="bean-detail" *ngIf="bean">
-  <p>This coffee bean originated from: {{bean.origin}}</p>
-  <p>Blend Name: {{bean.origin}}</p>
-  <p>variety: {{bean.variety}}</p>
-  <p>The intensity of this bean is: {{bean.variety}}</p>
+
+  <h1 class="mat-headline">Coffee Details</h1>
+
+  <div *ngIf="bean">
+    <p>This coffee bean originated from: <span class="mat-subheading-2">{{ bean.origin }}</span></p>
+    <p>Blend Name: <span class="mat-subheading-2">{{ bean.blend_name }}</span></p>
+    <p>variety: <span class="mat-subheading-2">{{ bean.variety }}</span></p>
+    <p>The intensity of this bean is: <span class="mat-subheading-2">{{ bean.intensifier }}</span></p>
+  </div>
+
 </div>

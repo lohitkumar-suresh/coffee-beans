@@ -6,7 +6,6 @@ export const BEAN_STATE_NAME = 'beans';
 const getBeansState = createFeatureSelector<BeansState>(BEAN_STATE_NAME);
 
 export const getBeans = createSelector(getBeansState, (state) => {
-  debugger;
   return state.beans;
 });
 
