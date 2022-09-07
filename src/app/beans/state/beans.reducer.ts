@@ -10,7 +10,8 @@ const _beansReducer = createReducer(
     return {
       ...state,
       beans: action.beans,
-      loading: false
+      loading: false,
+      storeLoaded: true
     };
   }));
 

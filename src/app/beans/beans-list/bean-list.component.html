@@ -1,11 +1,11 @@
-<div class="example-container mat-elevation-z8">
-  <div class="example-loading-shade" *ngIf="isLoadingResults | async">
+<div class="bean-container mat-elevation-z8">
+  <div class="loading-shade" *ngIf="isLoadingResults$ | async">
     <mat-spinner></mat-spinner>
   </div>
 
-  <div class="example-table-container">
+  <div class="bean-table-container">
 
-    <table mat-table [dataSource]="beans" class="example-table">
+    <table mat-table [dataSource]="beans" class="bean-table">
       <!-- Blend Name Column -->
       <ng-container matColumnDef="blend_name">
         <th mat-header-cell *matHeaderCellDef>Blend Name</th>
@@ -28,7 +28,7 @@
       <ng-container matColumnDef="customColumn1">
         <th mat-header-cell *matHeaderCellDef>Action</th>
         <td mat-cell *matCellDef="let row">
-            <button mat-button color="primary" (click)="viewDetails(row.id)">View Details</button>
+            <button mat-button color="primary" [routerLink]="['/view', row.id]" routerLinkActive="router-link-active" >View Details</button>
         </td>
       </ng-container>
 
@@ -38,3 +38,4 @@
   </div>
   <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="10" aria-label="Select page of beans"></mat-paginator>
 </div>
+

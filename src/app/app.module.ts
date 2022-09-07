@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './layout/header/header/header.component';
 import { FooterComponent } from './layout/footer/footer/footer.component';
 import { MaterialModule } from './shared/material.module';
+import { BeanDetailComponent } from './beans/bean-detail/bean-detail.component';
 import { StorageModule } from './store/storage.module';
 
 @NgModule({
@@ -15,7 +16,8 @@ import { StorageModule } from './store/storage.module';
     AppComponent,
     BeanListComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BeanDetailComponent
   ],
   imports: [
     BrowserModule,
